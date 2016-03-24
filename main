@@ -1,0 +1,224 @@
+<html>
+    <head>
+    <link rel="alternate" type="application/rss+xml" href="{RSS}">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://static.tumblr.com/wgijwsy/jgemkyt9x/jquery.photoset-grid.min.js">
+      $('.photoset-grid').photosetGrid({
+        highresLinks: true,
+        rel: $('.photoset-grid').attr('data-id'),
+      });
+    </script>
+    
+    <style>
+
+
+html {
+    font-size: {text:Font size};
+}
+
+/* Link styles */
+
+a {
+    color: #921adc;
+    text-decoration:none;
+    transition: all 0.5s ease;
+}
+
+body{
+    font-family: arial;
+    color:#000;
+    background-color: /*transparent;*/ rgba(255,255,255,0.85);
+}
+
+img,
+iframe {
+    width: 500px;
+}
+
+blockquote {
+    padding-left: 1rem;
+    border-left: 2px solid #eee;
+    margin-left: .3rem;
+}
+
+
+pre {
+    overflow: auto;
+}
+
+/* Audio styles */
+
+.tumblr_audio_player {
+    height: 100px;
+}
+
+body{
+    margin: auto;
+    width: 500px;
+}
+
+
+ol.notes {
+    padding: 0px;
+    margin: 25px 0px;
+    list-style-type: none;
+    border-bottom: solid 1px #ccc;
+}
+
+ol.notes li.note {
+    border-top: solid 1px #ccc;
+    padding: 10px;
+}
+
+ol.notes li.note img.avatar {
+    vertical-align: -4px;
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+}
+
+ol.notes li.note span.action {
+    font-weight: bold;
+}
+
+ol.notes li.note .answer_content {
+    font-weight: normal;
+}
+
+ol.notes li.note blockquote {
+    border-color: #eee;
+    padding: 4px 10px;
+    margin: 10px 0px 0px 25px;
+}
+
+ol.notes li.note blockquote a {
+    text-decoration: none;
+}
+
+.post{
+    margin-top: 80px;
+}
+</style>
+</head>
+
+<body>
+  <script>
+    if ( self == top ) {
+      document.write("<br>☄<a href = 'http://dominicburkart.tumblr.com'>blog home</a> ☄<a href = 'http://dominicburkart.tumblr.com/about'>about</a> ☄");
+      var css = document.createElement("style");
+      css.type = "text/css";
+      css.innerHTML = "a:hover{opacity: 1;color: #00ff00;}div{color:#000;opacity:1;}"
+       document.body.appendChild(css);
+    }
+    else{
+      var css = document.createElement("style");
+      css.type = "text/css";
+      css.innerHTML = ".tags {display: none;}"
+      document.body.appendChild(css);
+    }
+  </script>
+
+  <ol id="posts">
+    {block:Posts}
+      <br></br>
+      <br></br>
+      <br></br>
+      {block:Text}
+        {block:Title}
+         <h3><a href="{Permalink}">{Title}</a></h3>
+        {/block:Title}
+        {Body}
+      {/block:Text}
+      
+      {block:Photo}
+        <a href="{PhotoURL-HighRes}" target="_blank"><img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"></a>
+        {block:Caption}
+          <div class="caption">{Caption}</div>
+        {/block:Caption}
+      {/block:Photo}
+      
+      {block:Panorama}
+        {LinkOpenTag}
+          <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}"/>
+        {LinkCloseTag}
+        
+        {block:Caption}
+          <div class="caption">{Caption}</div>
+        {/block:Caption}
+      {/block:Panorama}
+      
+      {block:Photoset}
+        <div class="photoset-grid" data-layout="{PhotosetLayout}" data-id="photoset{PostID}">
+          {block:Photos}
+           <a href="{PhotoURL-HighRes}" target="_blank"><img src="{PhotoURL-HighRes}"
+            {block:HighRes}data-highres="{PhotoURL-HighRes}"{/block:HighRes}
+            width="{PhotoWidth-500}" height="{PhotoHeight-500}"
+            {block:Caption}alt="{Caption}"{/block:caption} /></a>
+          {/block:Photos}
+        </div>
+        {block:Caption}
+          {Caption}
+        {/block:caption}
+      {/block:Photoset}
+      
+      {block:Quote}
+        "{Quote}"
+          {block:Source}
+              <div class="source">{Source}</div>
+          {/block:Source}
+      {/block:Quote}
+      
+      {block:Link}
+        <a href="{URL}" class="link" {Target}>{Name}</a>
+          {block:Description}
+              <div class="description">{Description}</div>
+          {/block:Description}
+          {/block:Link}
+          
+      {block:Chat}
+          {block:Title}
+            <h3><a href="{Permalink}">{Title}</a></h3>
+          {/block:Title}
+          <ul class="chat">
+              {block:Lines}
+                  <li class="{Alt} user_{UserNumber}">
+                  {block:Label}
+                     <span class="label">{Label}</span>
+                  {/block:Label}
+                  {Line}
+                    </li>
+                  {/block:Lines}
+          </ul>
+      {/block:Chat}
+      
+      {block:Video}
+          {Video-500}
+          {block:Caption}
+            <div class="caption">{Caption}</div>
+          {/block:Caption}
+      {/block:Video}
+      
+      {block:Audio}
+        {AudioEmbed}
+        {block:Caption}
+            <div class="caption">{Caption}</div>
+        {/block:Caption}
+      {/block:Audio}
+      
+      <info>
+        <a href="{Permalink}" target="_blank">☄{DayOfMonth} {Month} {Year}</a>
+        <div class="tags">
+          {block:Tags}
+           <a href="{TagURL}">#{Tag}</a>
+          {/block:Tags}
+        </div>
+      </info>
+      
+    {/block:Posts}
+  </ol>
+  <br>
+  <br>
+  <br>
+  <p align="center">{block:PreviousPage}☄<a href="{PreviousPage}">previous page</a>{/block:PreviousPage} ☄{block:NextPage}<a href= "{NextPage}">next page</a> ☄{/block:NextPage}</p>
+</body>
+</html>
