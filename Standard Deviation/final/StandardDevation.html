@@ -14,7 +14,21 @@ function showDiv(d) {
        else
           e.style.display = 'block';
 }
+
+function hide(){
+	var e = document.getElementsByClassName("hiders");
+	for (var i = 0; i < e.length; i++){
+		e[i].style.display = 'none';
+	}
+}
 </script>
+<noscript>
+	<style>
+		.jsLink{
+			display: none;
+		}
+	</style>
+</noscript>
 
 <style>
 body{
@@ -60,7 +74,7 @@ body{
 
 </head>
 
-<body>
+<body onload = "hide()">
 
 
 <div class="top"></div>
@@ -73,14 +87,14 @@ body{
 
 
 <ul class="menu">
-  <li><a href="nietzsche-gay-science.pdf" target="_blank">pdf</a> /</li>
-  <li><a href="javascript:showDiv('About')">about</a> /</li>
-  <li><a href="javascript:showDiv('Contribute')">contribute</a> /</li>
-  <li><a href="javascript:showDiv('Archive')">archive</a></li>
+  <li><a href="nietzsche-gay-science.pdf" target="_blank">pdf</a> </li>
+  <li class = "jsLink">/ <a href="javascript:showDiv('About')">about</a> </li>
+  <li class = "jsLink">/ <a href="javascript:showDiv('Contribute')">contribute</a> </li>
+  <li class = "jsLink">/ <a href="javascript:showDiv('Archive')">archive</a></li>
 </ul>
 
 
-<div id = "About" style= "display:none;">
+<div class ="hiders"  id = "About">
 <div style="height:2em"></div>
 
 <p>Standard Deviation was started in 2016 an interdisciplinary journal for queer thought to be developed and explored. The objective of Standard Deviation is to emphasize queer narratives, which are a powerful cultural technology of criticism and innovation.</p>
@@ -96,7 +110,7 @@ Collaborators:
 </div>
 
 
-<div id = "Contribute" style="display:none;">
+<div class ="hiders" id = "Contribute">
 <div style="height:2em"></div>
 <p>To apply to have work included in Standard Deviation, email <a href="mailto:std.d3v@gmail.com">std.d3v@gmail.com</a> with a subject line that reads "application" as well as your attached work and a short description or abstract.</p>
 <ul class="collaborators">
@@ -108,7 +122,7 @@ Collaborators:
 </div>
 
 
-<div id = "Archive" style="display:none;">
+<div class ="hiders"  id = "Archive">
 <div style="height:2em"></div>
 <p>alsdjf</p>
 </div>
