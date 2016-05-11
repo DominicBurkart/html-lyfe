@@ -14,6 +14,16 @@ function showDiv(d) {
        else
           e.style.display = 'block';
 }
+function hide(){
+	var e = document.getElementsByClassName("hiders");
+	for (var i = 0; i < e.length; i++){
+		e[i].style.display = 'none';
+	}
+	e = document.getElementsByClassName("jsLink");
+	for (var i = 0; i < e.length; i++){
+		e[i].style.display = 'inline';	
+	}
+}
 </script>
 
 <style>
@@ -58,19 +68,30 @@ body{
 
 <script>var __adobewebfontsappname__="dreamweaver"</script><script src="http://use.edgefonts.net/lekton:n4:default;geostar:n4:default;amatic-sc:n4:default;prata:n4:default;fanwood-text:n4:default.js" type="text/javascript"></script>
 
+<noscript>
+<style>
+.title{
+	font-family: monospace;
+}
+body{
+	font-family: monospace;
+}
+</style>
+</noscript>
+
 </head>
 
-<body>
+<body  onload = "hide()">
 <div class="top"></div>
 <div class="title"> Standard Deviation</div>
 <p class="description">A new zine on queer art, science, and theory.</p>
 <ul class="menu">
-  <li><a href="javascript:showDiv('About')">about</a> /</li>
-  <li><a href="javascript:showDiv('Contribute')">contribute</a></li>
+  <li class = "jsLink" style="display:none"><a href="javascript:showDiv('About')">about</a></li>
+  <li class = "jsLink" style="display:none">/ <a href="javascript:showDiv('Contribute')">contribute</a></li>
 </ul>
 
 
-<div id = "About" style= "display:none;">
+<div class ="hiders" id = "About">
 <div style="height:2em"></div>
 
 <p>Standard Deviation was started in 2016 as an interdisciplinary journal for queer thought to be developed and explored. The objective of Standard Deviation is to emphasize queer narratives, which are a powerful cultural technology of criticism and innovation.</p>
@@ -84,7 +105,7 @@ Contact:
 </div>
 
 
-<div id = "Contribute" style="display:none;">
+<div class ="hiders"  id = "Contribute">
 <div style="height:2em"></div>
 <p>To apply to have work included in Standard Deviation, email <a href="mailto:std.d3v@gmail.com">std.d3v@gmail.com</a> with a subject line that reads "application" as well as your attached work and a short description or abstract.</p>
 <ul class="collaborators">
