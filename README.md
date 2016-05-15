@@ -1,2 +1,3 @@
-# html lyfe!
-some mostly-html stuff that i've done.
+#web lyfe!
+
+a mix of front-end web stuff that I've done!
