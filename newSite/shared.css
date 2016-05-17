@@ -16,14 +16,7 @@ body{
 	font-family: inconsolata;
 	font-style: normal;
 	font-weight: 500;
-	overflow:hidden;
-}
-content{
-	min-height: 100%; 
-	height:100vh;
-	width: 100vw;
-	position:absolute;
-	overflow:hidden;
+	overflow:scroll;
 }
 .menu{
 	font-size: 1.3em;
@@ -36,8 +29,10 @@ li{
 	list-style-type:none;
 }
 p{
+	overflow:scroll;
 	text-align:left;
 	padding: 3em;
+	padding-right: 7em; /*leaves room for the menu*/
 }
 .mList{
 	z-index: 1;
