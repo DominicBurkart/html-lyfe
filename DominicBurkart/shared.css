@@ -1,0 +1,46 @@
+@charset "UTF-8";
+/* CSS Document */
+html{
+	padding: 0px;
+	background: rgba(230,230,230,1.00);
+	text-align: center;
+	height:100vh;
+	width: 100vw;
+	overflow:hidden;
+}
+body{
+	height:100vh;
+	width: 100vw;
+	padding: 0px;
+	min-height: 100%;
+	font-family: inconsolata;
+	font-style: normal;
+	font-weight: 500;
+	overflow:scroll;
+}
+.menu{
+	font-size: 1.3em;
+	text-align: end;
+	bottom: 0;
+	right: 0.5em;
+	position:absolute;
+}
+li{
+	list-style-type:none;
+}
+p{
+	overflow:scroll;
+	text-align:left;
+	padding: 3em;
+	padding-right: 7em; /*leaves room for the menu*/
+}
+.mList{
+	z-index: 1;
+	position:absolute;
+	height: 1.2em;
+	width: 25em;
+	background: rgba(230,230,230,1.00);
+}
+.innerMenu{
+	display:inline;
+}
