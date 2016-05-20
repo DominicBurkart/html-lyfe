@@ -1,0 +1,20 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.mList{
+	width: 100vw;
+	font-size: medium;
+}
+
+.menu{
+	font-size: large;
+}
+
+body{
+	font-size: medium;
+}
+
+p{
+	font-size: medium;
+	overflow-x: hidden;
+}

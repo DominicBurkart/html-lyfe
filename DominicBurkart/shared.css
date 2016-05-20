@@ -9,14 +9,14 @@ html{
 	overflow:hidden;
 }
 body{
-	height:100vh;
-	width: 100vw;
 	padding: 0px;
 	margin:0px;
 	min-height: 100%;
 	font-family: inconsolata;
 	font-style: normal;
 	font-weight: 500;
+	height:100vh;
+	width: 100vw;
 	overflow:scroll;
 }
 .menu{
@@ -46,4 +46,14 @@ p{
 }
 .innerMenu{
 	display:inline;
+}
+#blog{
+	margin: 0px;
+	overflow:hidden;
+	height:100vh;
+	width: 100vw;
+	top:0px;
+	left:0px;
+	right:0px;
+	bottom:0px;
 }
