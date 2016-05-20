@@ -10,11 +10,14 @@
 	font-size: large;
 }
 
+html{
+	overflow:hidden;
+}
+
 body{
 	font-size: medium;
 }
 
 p{
 	font-size: medium;
-	overflow-x: hidden;
 }

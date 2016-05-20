@@ -6,12 +6,12 @@ html{
 	text-align: center;
 	height:100vh;
 	width: 100vw;
-	overflow:hidden;
 }
 body{
 	padding: 0px;
 	margin:0px;
-	min-height: 100%;
+	min-height: 100vh;
+	max-height: 100vh;
 	font-family: inconsolata;
 	font-style: normal;
 	font-weight: 500;
@@ -20,40 +20,43 @@ body{
 	overflow:scroll;
 }
 .menu{
+	z-index:1;
 	font-size: 1.3em;
 	padding:0.1em;
 	text-align: end;
 	bottom: 0;
 	right: 0.5em;
 	background: rgba(230,230,230,1.00);
-	position:absolute;
+	position:fixed;
 }
 li{
 	list-style-type:none;
 }
 p{
-	overflow:scroll;
+	overflow-y:scroll;
 	text-align:left;
 	padding: 3em;
 	padding-right: 7em; /*leaves room for the menu*/
 }
 .mList{
-	margin:0px;
+	position: fixed;
+	margin: 0px;
+	left:0;
+	right:0;
 	padding:0.5em;
 	z-index: 1;
 	background: rgba(230,230,230,1.00);
-	position:absolute;
 }
 .innerMenu{
 	display:inline;
 }
 #blog{
 	margin: 0px;
-	overflow:hidden;
 	height:100vh;
 	width: 100vw;
 	top:0px;
 	left:0px;
 	right:0px;
 	bottom:0px;
+	overflow:hidden;
 }
