@@ -12,6 +12,7 @@ body{
 	height:100vh;
 	width: 100vw;
 	padding: 0px;
+	margin:0px;
 	min-height: 100%;
 	font-family: inconsolata;
 	font-style: normal;
@@ -20,9 +21,11 @@ body{
 }
 .menu{
 	font-size: 1.3em;
+	padding:0.1em;
 	text-align: end;
 	bottom: 0;
 	right: 0.5em;
+	background: rgba(230,230,230,1.00);
 	position:absolute;
 }
 li{
@@ -35,11 +38,11 @@ p{
 	padding-right: 7em; /*leaves room for the menu*/
 }
 .mList{
+	margin:0px;
+	padding:0.5em;
 	z-index: 1;
-	position:absolute;
-	height: 1.2em;
-	width: 25em;
 	background: rgba(230,230,230,1.00);
+	position:absolute;
 }
 .innerMenu{
 	display:inline;
