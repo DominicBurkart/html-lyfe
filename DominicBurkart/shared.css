@@ -17,7 +17,7 @@ body{
 	font-weight: 500;
 	height:100vh;
 	width: 100vw;
-	overflow:scroll;
+	overflow-y: visible;
 }
 .menu{
 	z-index:1;
@@ -32,8 +32,13 @@ body{
 li{
 	list-style-type:none;
 }
+#pWrapper{
+	height:100vh;
+	width:100vw;
+	overflow:hidden;
+}
 p{
-	overflow-y:scroll;
+	margin: 0;
 	text-align:left;
 	padding: 3em;
 	padding-right: 7em; /*leaves room for the menu*/
