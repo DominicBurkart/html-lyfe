@@ -16,10 +16,9 @@ html{
 
 p{
 	font-size: medium;
-	height: 100vh;
 	padding-right: 7em;
 	padding-top: 4em;
-	overflow:visible;
+	padding-bottom:5em;
 }
 
 #blog{

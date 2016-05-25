@@ -10,8 +10,8 @@ html{
 body{
 	padding: 0px;
 	margin:0px;
-	min-height: 100vh;
-	max-height: 100vh;
+	min-width: 100vw;
+	max-width: 100vw;
 	font-family: inconsolata;
 	font-style: normal;
 	font-weight: 500;
@@ -32,16 +32,12 @@ body{
 li{
 	list-style-type:none;
 }
-#pWrapper{
-	height:100vh;
-	width:100vw;
-	overflow:hidden;
-}
 p{
 	margin: 0;
 	text-align:left;
 	padding: 3em;
 	padding-right: 7em; /*leaves room for the menu*/
+	padding-bottom:4em;
 }
 .mList{
 	position: fixed;
