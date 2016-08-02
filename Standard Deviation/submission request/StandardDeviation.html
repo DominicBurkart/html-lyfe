@@ -8,11 +8,9 @@
 
 <script>
 function showDiv(d) {
+    hide();
     var e = document.getElementById(d);
-       if(e.style.display == 'block')
-          e.style.display = 'none';
-       else
-          e.style.display = 'block';
+    e.style.display = 'block';
 }
 function hide(){
 	var e = document.getElementsByClassName("hiders");
@@ -84,7 +82,7 @@ body{
 <body  onload = "hide()">
 <div class="top"></div>
 <div class="title"> Standard Deviation</div>
-<p class="description">A new zine on queer art, science, and theory.</p>
+<p class="description">A new digital zine on queer art, science, and theory.</p>
 <ul class="menu">
   <li class = "jsLink" style="display:none"><a href="javascript:showDiv('About')">about</a></li>
   <li class = "jsLink" style="display:none">/ <a href="javascript:showDiv('Contribute')">contribute</a></li>
@@ -97,7 +95,7 @@ body{
 
 <p>Standard Deviation was founded by Dominic Burkart (<a target="_blank" href="http://dominicburkart.com">website</a>) in 2016 as an interdisciplinary journal for queer thought to be developed and explored. The objective of Standard Deviation is to emphasize and interrelate queer narratives, which are a powerful cultural technology of criticism and innovation.</p>
 
-<p>Standard Deviation has no institutional affiliations, and reviews work from all interested parties. Applications are reviewed by committee and advisors are referenced in the work's field.</p>
+<p>Standard Deviation has no institutional affiliations and reviews work from all interested parties. Applications are reviewed by committee and advisors are referenced in the work's field. Creators retain copyright over any material included in Standard Deviation and only give Standard Deviation permission to include their work or portions of their work in our publication and promotional materials.</p>
 </div>
 
 
