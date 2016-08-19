@@ -5,8 +5,39 @@
 <title>Dominic Burkart</title>
 <link rel="stylesheet" type="text/css" href="shared.css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
+<style>
+.bg{
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	position:fixed;
+	z-index:-1;
+	background-size:contain;
+	background-position:center;
+	background-color: rgba(230,230,230,1.00);
+	background-repeat:no-repeat;
+	display:none;
+}
+</style>
 </head>
-<body>
+<body onLoad="listen()">
+<div id="bg0" class="bg" style="background-image:url('assets/art/bg0.jpg');"></div>
+<div id="bg1" class="bg" style="background-image:url('assets/art/bg1.jpg');"></div>
+<div id="bg2" class="bg" style="background-image:url('assets/art/bg2.jpg');"></div>
+<div id="bg3" class="bg" style="background-image:url('assets/art/bg3.jpg');"></div>
+<div id="bg4" class="bg" style="background-image:url('assets/art/bg4.jpg');"></div>
+<div id="bg5" class="bg" style="background-image:url('assets/art/bg5.jpg');"></div>
+<div id="bg6" class="bg" style="background-image:url('assets/art/bg6.jpg');"></div>
+<div id="bg7" class="bg" style="background-image:url('assets/art/bg7.jpg');"></div>
+<div id="bg8" class="bg" style="background-image:url('assets/art/bg8.jpg');"></div>
+<div id="bg9" class="bg" style="background-image:url('assets/art/bg9.jpg');"></div>
+<div id="bg10" class="bg" style="background-image:url('assets/art/bg10.jpg');"></div>
+<div id="bg11" class="bg" style="background-image:url('assets/art/bg11.jpg');"></div>
+<div id="bg12" class="bg" style="background-image:url('assets/art/bg12.jpg');"></div>
+<div id="bg13" class="bg" style="background-image:url('assets/art/bg13.jpg');"></div>
+<div id="bg14" class="bg" style="background-image:url('assets/art/bg14.jpg');"></div>
+<div id="bg15" class="bg" style="background-image:url('assets/art/bg15.jpg');"></div>
+<div id="bg16" class="bg" style="background-image:url('assets/art/bg16.jpg');"></div>
 <ul  class = "mList">
 <li class="innerMenu"><a href="art.html">portfolios</a> </li>
   <li class="innerMenu">/ <a href="events.html">events</a> </li>
@@ -15,15 +46,18 @@
   <li class="innerMenu">/ <a href="performance.html">performance</a></li>
 </ul>
 <br><br>
-<p><a href="assets/burkartPortraitPortfolio.pdf" target="_blank">portrait portfolio</a>
+<p id="infoP" style="background-color:rgba(230,230,230,1); margin: 8vw auto; padding: 1em 1em 2em 1em; max-width: 500px">
+<a href="assets/burkartPortraitPortfolio.pdf" target="_blank" style="text-align:center;">portrait portfolio</a>
 <br><br>
-site under construction: performance portfolio expected by August 10th. For now, look under "performance" in the above menu to see my recent work, or contact me with any questions at dominicburkart@nyu.edu.
-</p>
-artist's statement
-<p>
+<a href="assets/burkartPerformancePortfolio.pdf" target="_blank">performance portfolio</a>
+<br><br>
+<br><br>
 I work mostly in photography (film and digital), durational / action-oriented performance art, music, and digital mixed media. As an intermedia artist, I am most interested in the intersections and relationships between artworks and the construction of complex, interconnected narratives.
 <br><br>
 My art practice focuses on aesthetics of deconstruction and selective reconstruction. Over time, emotionality, referentiality, and relationality have become more integral in my practice. My generative work has consistently emphasized queerness and criticisms of hierarchy, malignant dialectics, and other reductive frameworks; however, I also find great meaning in documentation (especially in portraiture and performance archiving), primarily through photography. I create art to better understand my existence.
+<br><br>
+<br><br>
+<a href="javascript:slideshow()">slideshow (click through)</a>
 </p>
 <ul class="menu">
   <li><a href="about.html" id= "aboutLink">about</a></li>
@@ -33,5 +67,64 @@ My art practice focuses on aesthetics of deconstruction and selective reconstruc
   <li><a href="links.html" id="linksLink">links</a></li>
 </ul>
 <script src ="mobile.js"></script>
+<script>
+var s = false;
+
+window.addEventListener("keydown", kp, false);
+
+function kp(k){
+	if (k.key == "Escape" || k.key == " "){
+		endSlideshow();
+	}
+}
+
+function slideshow(){
+	showBGs();
+	var css = document.createElement("style");
+    css.type = "text/css";
+    css.innerHTML = ".bg{z-index:2}";
+	css.id = "bg-indexer";
+    document.body.appendChild(css);
+	s = true;
+}
+
+function listen(){
+	document.body.addEventListener('dblclick', endSlideshow(), false);
+	document.body.addEventListener('click', function(){hideOnClick();}, false);
+}
+
+function hideOnClick(){
+	if (event.target.getAttribute('class') == "bg"){
+		event.target.style.display = 'none';
+	}
+	if (event.target.getAttribute('id') == "bg0"){
+		hideBGs();
+		endSlideshow();
+	}
+}
+
+function showBGs(){
+	var bgs = document.getElementsByClassName('bg');
+	for (var i = 0; i < bgs.length; i++){
+		bgs[i].style.display = 'block';
+	}
+}
+
+function hideBGs(){
+	var bgs = document.getElementsByClassName('bg');
+	for (var i = 0; i < bgs.length; i++){
+		bgs[i].style.display = 'none';
+	}
+}
+
+function endSlideshow(){
+	if (s == true){
+		var css = document.getElementById("bg-indexer");
+		css.parentNode.removeChild(css);
+		hideBGs();
+		s = false;
+	}
+}
+</script>
 </body>
 </html>
