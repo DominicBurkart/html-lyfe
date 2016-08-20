@@ -5,13 +5,13 @@
 <title>Dominic Burkart</title>
 <link rel="stylesheet" type="text/css" href="shared.css">
 <style>
-#defaultCanvas0{overflow: hidden !important;}
-html{overflow: hidden !important;}
+html, body, #defaultCanvas0{overflow: hidden !important; position:fixed; left: 0; top: 0;}
 </style>
 <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
 </head>
 
-<body style="overflow: hidden !important;">
+<body>
+<div>
 <script src="p5Libraries/p5.js" type="text/javascript"></script>
 <script>
 var num = 8;
@@ -73,5 +73,6 @@ function mouseReleased(){
   <li><a href="links.html" id="linksLink">links</a></li>
 </ul>
 <script src ="mobile.js"></script>
+</div>
 </body>
 </html>
