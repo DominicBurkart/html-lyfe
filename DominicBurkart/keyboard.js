@@ -28,7 +28,7 @@ var equal_tempered = {
   186: 329.628,
   219: 369.994,
   222: 391.995,
-}
+};
 
 //let's just deal with equal-tempered scales for now tbh!
 var tones = equal_tempered;

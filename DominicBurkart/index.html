@@ -10,7 +10,7 @@ html, body, #defaultCanvas0{overflow: hidden !important; position:fixed; left: 0
 <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
 </head>
 
-<body>
+<body onclick="document.getElementById('instructions').style.display='none';" ontouchend="document.getElementById('instructions').style.display='none';">
 <script src="p5Libraries/p5.js" type="text/javascript"></script>
 <script>
 var num = 8;
@@ -46,7 +46,7 @@ function draw() {
     x = abs(mouseX);
     y = abs(mouseY);
   }
-  background(230);
+  background(0,0);
   cam();
   var i = 0;
   while (i < num){
@@ -64,6 +64,9 @@ function mouseReleased(){
   sel = false;
 }
 </script>
+<div id="instructions" style="z-index:100; color:'black';">
+click and drag to change the ellipsoid's shape.
+</div>
 <ul class="menu">
   <li><a href="about.html" id= "aboutLink">about</a></li>
   <li><a href="art.html" id="artLink">art</a></li>

@@ -9,9 +9,9 @@ function dshape(){
 }
 
 function irot(){
-  rotateZ(frameCount * 0.01);
-  rotateX(frameCount * 0.01);
-  rotateY(frameCount * 0.01);
+  rotateZ(frameCount * 0.005);
+  rotateX(frameCount * 0.005);
+  rotateY(frameCount * 0.005);
 }
 
 function cam(){
