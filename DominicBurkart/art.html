@@ -5,38 +5,21 @@
 <title>Dominic Burkart</title>
 <link rel="stylesheet" type="text/css" href="shared.css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
-<style>
-.bg{
-	top: 0;
-	width: 100vw;
-	height: 100vh;
-	position:fixed;
-	z-index:-1;
-	background-size:contain;
-	background-position:center;
-	background-color: black;
-	background-repeat:no-repeat;
-	display:none;
-}
-</style>
+	<style>
+		html{
+			width:100vw;
+			height:100vh; 
+			background-image: url("assets/small-icara-study.jpg");
+			background-size: cover;
+			background-position: fixed;
+			overflow-x: hidden;
+		}
+		.centerP, ul{
+			background-color: rgba(255,255,255,0.7) !important;
+		}
+	</style>
 </head>
 <body>
-<div id="bg1" class="bg" style="background-image:url('assets/art/bg1.jpg');"></div>
-<div id="bg2" class="bg" style="background-image:url('assets/art/bg2.jpg');"></div>
-<div id="bg3" class="bg" style="background-image:url('assets/art/bg3.jpg');"></div>
-<div id="bg4" class="bg" style="background-image:url('assets/art/bg4.jpg');"></div>
-<div id="bg5" class="bg" style="background-image:url('assets/art/bg5.jpg');"></div>
-<div id="bg6" class="bg" style="background-image:url('assets/art/bg6.jpg');"></div>
-<div id="bg7" class="bg" style="background-image:url('assets/art/bg7.jpg');"></div>
-<div id="bg8" class="bg" style="background-image:url('assets/art/bg8.jpg');"></div>
-<div id="bg9" class="bg" style="background-image:url('assets/art/bg9.jpg');"></div>
-<div id="bg10" class="bg" style="background-image:url('assets/art/bg10.jpg');"></div>
-<div id="bg11" class="bg" style="background-image:url('assets/art/bg11.jpg');"></div>
-<div id="bg12" class="bg" style="background-image:url('assets/art/bg12.jpg');"></div>
-<div id="bg13" class="bg" style="background-image:url('assets/art/bg13.jpg');"></div>
-<div id="bg14" class="bg" style="background-image:url('assets/art/bg14.jpg');"></div>
-<div id="bg15" class="bg" style="background-image:url('assets/art/bg15.jpg');"></div>
-<div id="bg16" class="bg" style="background-image:url('assets/art/bg16.jpg');"></div>
 <ul  class = "mList">
 <li class="innerMenu"><a href="art.html">portfolios</a> </li>
   <li class="innerMenu">/ <a href="events.html">events</a> </li>
@@ -44,26 +27,22 @@
   <li class="innerMenu">/ <a href="composition.html">composition</a> </li>
   <li class="innerMenu">/ <a href="performance.html">performance</a></li>
 </ul>
-<br><br>
-<p id="infoP" class="centerP">
-<a href="assets/burkartPortraitPortfolio.pdf" target="_blank" style="text-align:center;">portrait portfolio</a>
-<br><br>
-<a href="assets/burkartPerformancePortfolio.pdf" target="_blank">performance portfolio</a>
-<br><br>
-<br>My art focuses on queer identity, postmodern concepts of performativity, aesthetics of resilience, and technology. See below for representative works, or above (in the portfolios and in the menu at the top of the page) for works in specific media.
-<br><br>
 <br>
+<br>
+<br>
+<div class="centerP">
+<p id="infoP">
+<br>My art focuses on queer identity, postmodern concepts of performativity, resilience, and technology.<br><br>portfolios: <a href="assets/burkartPerformancePortfolio.pdf" target="_blank">performance</a>, <a href="assets/burkartPortraitPortfolio.pdf" target="_blank" style="text-align:center;">portrait</a>
+	</p><br>Representative Works<br><br>
+<p>
+	ICARA / BUILD BETTER WINGS – performance (<a href="http://dominicburkart.com/assets/burkartPerformancePortfolio.pdf#page=2">info</a>, <a href="https://dominicburkart.tumblr.com/tagged/icara/chrono/" target="_blank">blog</a>)
 <br><br>
-	ICARA / BUILD BETTER WINGS – performance (<a href="http://dominicburkart.com/assets/burkartPerformancePortfolio.pdf#page=2">information</a>, <a href="https://dominicburkart.tumblr.com/tagged/icara/chrono/" target="_blank">blog</a>)
-<br><br>
-	Becoming a Rose – performance (<a href="http://dominicburkart.com/assets/burkartPerformancePortfolio.pdf#page=12" target="_blank">information</a>, <a href="https://dominicburkart.tumblr.com/tagged/becoming%20a%20rose/chrono/" target="_blank">blog</a>)
+	Becoming a Rose – performance (<a href="http://dominicburkart.com/assets/burkartPerformancePortfolio.pdf#page=12" target="_blank">info</a>, <a href="https://dominicburkart.tumblr.com/tagged/becoming%20a%20rose/chrono/" target="_blank">blog</a>)
 	<br><br>
 Apolitical – string quartet (<a href="http://dominicburkart.tumblr.com/post/115237332144/this-is-the-midi-realization-of-the-first-string" target="_blank">midi realization</a>, <a href="http://dominicburkart.com/assets/apolitical.pdf" target="_blank">score</a>)
+	</p>
+	</div>
 <br><br>
-<br><br>
-<br>
-<a href="javascript:showFirst();">slideshow (click through)</a>
-</p>
 <ul class="menu">
   <li><a href="about.html" id= "aboutLink">about</a></li>
   <li><a href="art.html" id="artLink">art</a></li>
@@ -71,47 +50,5 @@ Apolitical – string quartet (<a href="http://dominicburkart.tumblr.com/post/11
   <li><a href="research.html" id="researchLink">research</a></li>
 </ul>
 <script src ="mobile.js"></script>
-<script>
-var s = false;
-var cur = 0;
-var bgs = document.getElementsByClassName('bg');
-
-window.addEventListener('click', clicked, false);
-window.addEventListener("touchstart", clicked, false);
-
-function clicked(){
-	if (event.target.getAttribute('class') == "bg"){
-		bgs[cur].style.display = 'none';
-		cur += 1;
-		if (cur >= bgs.length){
-			endSlideshow();
-			cur = 0;
-		}
-		else{
-			bgs[cur].style.display = 'block';
-		}
-	}
-}
-
-function showFirst(){
-	var css = document.createElement("style");
-    css.type = "text/css";
-    css.innerHTML = ".bg{z-index:2}";
-	css.id = "bg-indexer";
-    document.body.appendChild(css);
-	
-	bgs[0].style.display = 'block';
-	
-	s = true;
-}
-
-function endSlideshow(){
-	if (s == true){
-		var css = document.getElementById("bg-indexer");
-		css.parentNode.removeChild(css);
-		s = false;
-	}
-}
-</script>
 </body>
 </html>
