@@ -6,16 +6,23 @@
 <link rel="stylesheet" type="text/css" href="shared.css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
 	<style>
-		html{
-			width:100vw;
-			height:100vh; 
-			background-image: url("assets/small-icara-study.jpg");
-			background-size: cover;
-			background-position: fixed;
-			overflow-x: hidden;
-		}
 		.centerP, ul{
 			background-color: rgba(255,255,255,0.7) !important;
+		}
+		body:before { /*since mobile backgrounds don't stay fixed */
+			content: "";
+			display: block;
+			position: fixed;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+			background: url(assets/small-icara-study.jpg) no-repeat center center;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
 		}
 	</style>
 </head>
@@ -32,7 +39,7 @@
 <br>
 <div class="centerP">
 <p id="infoP">
-<br>My art focuses on queer identity, postmodern concepts of performativity, resilience, and technology.<br><br>portfolios: <a href="assets/burkartPerformancePortfolio.pdf" target="_blank">performance</a>, <a href="assets/burkartPortraitPortfolio.pdf" target="_blank" style="text-align:center;">portrait</a>
+<br>My art focuses on queer identity, postmodern concepts of performativity, resilience, and technology.<br><br>Portfolios: <a href="assets/burkartPerformancePortfolio.pdf" target="_blank">performance</a>, <a href="assets/burkartPortraitPortfolio.pdf" target="_blank" style="text-align:center;">portrait</a>
 	</p><br>Representative Works<br><br>
 <p>
 	ICARA / BUILD BETTER WINGS – performance (<a href="http://dominicburkart.com/assets/burkartPerformancePortfolio.pdf#page=2">info</a>, <a href="https://dominicburkart.tumblr.com/tagged/icara/chrono/" target="_blank">blog</a>)
