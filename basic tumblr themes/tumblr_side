@@ -4,13 +4,6 @@
         {block:Description}
             <meta name="description" content="{Description}" />
         {/block:Description}
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="http://static.tumblr.com/wgijwsy/jgemkyt9x/jquery.photoset-grid.min.js">
-    $('.photoset-grid').photosetGrid({
-  highresLinks: true,
-  rel: $('.photoset-grid').attr('data-id'),
-});
-</script>
 
         <style>
 
@@ -29,13 +22,20 @@ a {
 
 body{
     font-family: arial;
-    color:#000;
-    background-color: /*transparent;*/ rgba(255,255,255,0.85);
+    color: gray;
+    background-color: black;
+    width: 500px;
+    max-width:100vw;
+    margin:auto;
+    width = 100vw;
+    resize: both;
+    overflow:scroll;
 }
 
-img,
-iframe {
-    width: 500px;
+img{
+    max-width: 500px;
+    width:100%;
+    height:auto;
 }
 
 blockquote {
@@ -98,18 +98,29 @@ ol.notes li.note blockquote a {
                 text-decoration: none;
             }
 
+ol{
+    padding:0px;
+}
             
 .post{
     margin-top: 80px;
+    padding-right:10em;
+    max-width:100vw;
 }
+
+.caption{
+    max-width: 90vw;
+    margin: 0 auto;
+}
+
 </style>
     </head>
     <body>
         {block:Description}
             <p id="description">{Description}</p>
         {/block:Description}
-        <a href="http://smiuma.tumblr.com/">home</a><br><br>
-        <a href="http://smiuma.tumblr.com/archive">archive</a>
+        <a href="{BlogURL}">home</a><br><br>
+        <a href="{BlogURL}/archive">archive</a>
 
         <ol id="posts">
             {block:Posts}
@@ -189,7 +200,7 @@ ol.notes li.note blockquote a {
                 <a href="{Permalink}" target="_blank">☄{DayOfMonth} {Month} {Year}</a>
                 <div class="tags">
                 {block:Tags}
-                        <a href="{TagURL}">#{Tag}</a>
+                        <a href="{TagURL}">#{Tag} </a>
                       
                 {/block:Tags}
                 </div>
