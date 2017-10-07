@@ -101,7 +101,7 @@ ol.notes li.note blockquote a {
 ol{
     padding:0px;
 }
-            
+
 .post{
     margin-top: 80px;
     padding-right:10em;
@@ -120,7 +120,7 @@ ol{
             <p id="description">{Description}</p>
         {/block:Description}
         <a href="{BlogURL}">home</a><br><br>
-        <a href="{BlogURL}/archive">archive</a>
+        <a href="{BlogURL}archive">archive</a>
 
         <ol id="posts">
             {block:Posts}
@@ -136,14 +136,14 @@ ol{
                         {block:Caption}
                             <div class="caption">{Caption}</div>
                         {/block:Caption}
-                        
+
                 {/block:Photo}{block:Panorama}
                         {LinkOpenTag}
                             <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}"/>
                         {LinkCloseTag}{block:Caption}
                             <div class="caption">{Caption}</div>
                         {/block:Caption}
-                        
+
                 {/block:Panorama}{block:Photoset}
   <div class="photoset-grid" data-layout="{PhotosetLayout}" data-id="photoset{PostID}">
     {block:Photos}
@@ -170,7 +170,7 @@ ol{
 
                         {block:Description}
                             <div class="description">{Description}</div>
-                        
+
                         {/block:Description}
                 {/block:Link}{block:Chat}
                         {block:Title}
@@ -185,7 +185,7 @@ ol{
                                     {/block:Label}{Line}
                                 </li>
                             {/block:Lines}
-                          
+
                         </ul>
                 {/block:Chat}{block:Video}
                         {Video-500}{block:Caption}
@@ -201,12 +201,12 @@ ol{
                 <div class="tags">
                 {block:Tags}
                         <a href="{TagURL}">#{Tag} </a>
-                      
+
                 {/block:Tags}
                 </div>
                 {/block:Posts}
                 </info>
-                
+
         </ol>
         <br>
         <br>

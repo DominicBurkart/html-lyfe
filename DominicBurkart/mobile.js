@@ -15,7 +15,7 @@ else{
 		var link = document.createElement('link');
 		link.type = 'text/css';
 		link.rel = 'stylesheet';
-		link.href = 'noScroll.css';
+		//link.href = 'noScroll.css';
 		head.appendChild(link);
 	} 
 }

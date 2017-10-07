@@ -1,7 +1,7 @@
 <html>
     <head>
     <link rel="alternate" type="application/rss+xml" href="{RSS}">
-    
+
     <style>
 html {
     font-size: normal;
@@ -105,7 +105,7 @@ ol{
 </head>
 
 <body>
-<div id="l"><br>☄<a href = '{BlogURL}'>blog home</a> ☄<a href = '{BlogURL}/about'>about</a> ☄</div>
+<div id="l"><br>☄<a href = '{BlogURL}'>blog home</a> ☄<a href = '{BlogURL}about'>about</a> ☄</div>
   <script>
     if ( self == top ) {
       var css = document.createElement("style");
@@ -136,24 +136,24 @@ ol{
         {/block:Title}
         {Body}
       {/block:Text}
-      
+
       {block:Photo}
         <a href="{PhotoURL-HighRes}" target="_blank"><img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"></a>
         {block:Caption}
           <div class="caption">{Caption}</div>
         {/block:Caption}
       {/block:Photo}
-      
+
       {block:Panorama}
         {LinkOpenTag}
           <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}"/>
         {LinkCloseTag}
-        
+
         {block:Caption}
           <div class="caption">{Caption}</div>
         {/block:Caption}
       {/block:Panorama}
-      
+
       {block:Photoset}
         <div class="photoset-grid" data-layout="{PhotosetLayout}" data-id="photoset{PostID}">
           {block:Photos}
@@ -167,21 +167,21 @@ ol{
           {Caption}
         {/block:caption}
       {/block:Photoset}
-      
+
       {block:Quote}
         "{Quote}"
           {block:Source}
               <div class="source">{Source}</div>
           {/block:Source}
       {/block:Quote}
-      
+
       {block:Link}
         <a href="{URL}" class="link" {Target}>{Name}</a>
           {block:Description}
               <div class="description">{Description}</div>
           {/block:Description}
           {/block:Link}
-          
+
       {block:Chat}
           {block:Title}
             <h3><a href="{Permalink}">{Title}</a></h3>
@@ -197,21 +197,21 @@ ol{
                   {/block:Lines}
           </ul>
       {/block:Chat}
-      
+
       {block:Video}
           {Video-500}
           {block:Caption}
             <div class="caption">{Caption}</div>
           {/block:Caption}
       {/block:Video}
-      
+
       {block:Audio}
         {AudioEmbed}
         {block:Caption}
             <div class="caption">{Caption}</div>
         {/block:Caption}
       {/block:Audio}
-      
+
       <info>
         <a class="postPermalink" href="{Permalink}" target="_blank">☄{DayOfMonth} {Month} {Year}</a>
         <div class="tags">
@@ -220,7 +220,7 @@ ol{
           {/block:Tags}
         </div>
       </info>
-     
+
     {/block:Posts}
      </div>
   </ol>

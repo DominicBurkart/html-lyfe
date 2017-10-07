@@ -56,9 +56,11 @@ p{
 	display:inline;
 }
 #blog{
+	top:0;
+	left:0;
+	position:absolute;
 	height:100vh;
 	width:100vw;
-	overflow:hidden;
 }
 .centerCenterP, .centerP{
 	padding: 1em 1em 2em 1em;
